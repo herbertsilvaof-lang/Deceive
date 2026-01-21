@@ -57,7 +57,7 @@ internal static class Utils
             var latestShownVersion = Persistence.GetPromptedUpdateVersion();
 
             // If we have, return.
-            if (string.IsNullOrEmpty(latestShownVersion) && latestShownVersion == latestVersion)
+            if (!string.IsNullOrEmpty(latestShownVersion) && latestShownVersion == latestVersion)
                 return;
 
             // Show a message and record the latest shown.
